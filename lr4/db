@@ -1,0 +1,20 @@
+use lr4ORVP;
+alter user 'root'@'localhost' identified with mysql_native_password by 'root';
+CREATE TABLE hospital(
+	ID INT NOT NULL AUTO_INCREMENT,
+	NAME VARCHAR(50) NOT NULL,
+	PHONE VARCHAR(11) NOT NULL,
+    Number_of_employees INT NOT NULL,
+	PRIMARY KEY (ID)
+);
+INSERT INTO hospital (NAME, PHONE, Number_of_employees) VALUES ('Поликлиника №1', '89526253265', 202);
+INSERT INTO hospital (NAME, PHONE, Number_of_employees) VALUES ('Поликлиника №2', '89526563265', 534);
+INSERT INTO hospital (NAME, PHONE, Number_of_employees) VALUES ('Областная больница', '88523652596', 98);
+INSERT INTO hospital (NAME, PHONE, Number_of_employees) VALUES ('Поликлиника №8', '89528520312', 360);
+INSERT INTO hospital (NAME, PHONE, Number_of_employees) VALUES ('Больница №6', '83438523695', 25);
+
+
+UPDATE hospital SET NAME = 'Поликлиника 1' WHERE id = 1;
+UPDATE hospital SET NAME = 'Поликлиника 2' WHERE id = 2;
+UPDATE hospital SET NAME = 'Поликлиника 8' WHERE id = 4;
+UPDATE hospital SET NAME = 'Больница 6' WHERE id = 5;
