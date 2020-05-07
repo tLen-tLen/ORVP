@@ -9,7 +9,7 @@ class Product extends Model
    public static function getAllProduct()
    {
        $arrResult = array();
-       $link = mysqli_connect('localhost', 'root', 'root', 'lrphp');
+       $link = mysqli_connect('db', 'root', 'root', 'lrphp');
        if(mysqli_connect_errno()) die('Ошибка соединения:'.mysqli_connect_error());
        $sql = "SELECT * FROM products";
        $res = mysqli_query($link, $sql);
