@@ -30,7 +30,7 @@ class Product extends Model
    
    public static function destroy($id)
    {
-       $link = mysqli_connect('localhost', 'root', 'root', 'lrphp');
+       $link = mysqli_connect('db', 'root', 'root', 'lrphp');
        if(mysqli_connect_errno()) die('Ошибка соединения:'.mysqli_connect_error());
        $sql = "DELETE FROM products WHERE id=" . $id;
        $res = mysqli_query($link, $sql);
@@ -39,7 +39,7 @@ class Product extends Model
    
    public static function create($name, $description, $price, $photo) {
        $intPrice = (int)$price;
-       $link = mysqli_connect('localhost', 'root', 'root', 'lrphp');
+       $link = mysqli_connect('db', 'root', 'root', 'lrphp');
        if(mysqli_connect_errno()) die('Ошибка соединения:'.mysqli_connect_error());
        $sql = "INSERT INTO products (`name`, `description`, `price`, `photo`) 
                 VALUES ('" . $name ."', '" . $description . "', " . $intPrice. ", ' " . $photo . "')";
