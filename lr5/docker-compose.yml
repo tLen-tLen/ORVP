@@ -30,3 +30,9 @@ services:
       MYSQL_DATABASE: lrphp
       MYSQL_ROOT_PASSWORD: root
       
+ memcached:
+    image: memcached
+    container_name: base-memcached
+    ports:
+      - 11212:11211
+      
