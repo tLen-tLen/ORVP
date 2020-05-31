@@ -17,15 +17,15 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          Электронный журнал
-        </Link>
+        <Link to={`/`} style={{
+            color: `white`
+          }}>Произведения |</Link>
+        <Link to={`/autors`} style={{
+            color: `white`
+          }}> Авторы |</Link>
+        <Link to={`/magazines`} style={{
+            color: `white`
+          }}> Журналы </Link>
       </h1>
     </div>
   </header>

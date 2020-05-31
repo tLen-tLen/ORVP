@@ -13,9 +13,9 @@ const IndexPage = ({ data }) => (
         <li key={document.node.id}>
             <h4>{document.node.title}</h4>
           <font color="#696969">
-            <h5>{document.node.date}</h5>
-            <h4>Автор произведения — <Link to={`/autor/{document.node.autor.id}`}> {document.node.autor.Name} {document.node.autor.Surname}</Link></h4>
-            <h4>Журнал — <Link to={`/magazine/{document.node.magazine.id}`}> {document.node.magazine.Name} (Рейтинг: {document.node.magazine.rating})</Link></h4>
+            <h5>({document.node.date})</h5>
+            <h4>Автор произведения —  {document.node.autor.Name} {document.node.autor.Surname}</h4>
+            <h4>Журнал —  {document.node.magazine.Name} (Рейтинг: {document.node.magazine.rating})</h4>
           </font>
         </li>
       ))}
